@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock-Paper-Scissors Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.10.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <h1>Rock-Paper-Scissors Game</h1>
+    <p>Show a hand gesture in front of the webcam to play!</p>
+
+    <!-- Webcam Video -->
+    <video id="video" width="640" height="480" autoplay></video>
+
+    <!-- Canvas for Capturing Video Frame -->
+    <canvas id="canvas" width="640" height="480" style="display: none;"></canvas>
+
+    <!-- Predict Gesture Button -->
+    <button onclick="predictGesture()">Capture Gesture</button>
+
+    <!-- Results Display -->
+    <div id="result" style="margin-top: 20px;">
+        <p>Results will appear here...</p>
+    </div>
+</body>
+</html>
